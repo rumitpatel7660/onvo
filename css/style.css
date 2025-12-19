@@ -1,0 +1,832 @@
+/* Custom CSS for Onvo Bath Fitting */
+
+
+/* Color Palette */
+
+:root {
+    --black: #000000;
+    --anthracite: #2B2B2B;
+    --gold: #D4AF37;
+    --white: #FFFFFF;
+    --soft-grey: #F5F5F5;
+    --dark-grey: #888888;
+    /* New color palette */
+    --navy: #1E2235;
+    --red: #E63946;
+    --light-grey: #F6F6F9;
+}
+
+
+/* Gold Accent Color */
+
+.text-gold {
+    color: var(--gold);
+}
+
+.bg-gold {
+    background-color: var(--gold);
+}
+
+.border-gold {
+    border-color: var(--gold);
+}
+
+.from-gold {
+    --tw-gradient-from: var(--gold);
+}
+
+.to-yellow-600 {
+    --tw-gradient-to: #ca8a04;
+}
+
+
+/* Navy Color */
+
+.text-navy {
+    color: var(--black);
+}
+
+.text-red {
+    color: var(--gold);
+}
+
+
+/* Hover Effects */
+
+.hover\:text-gold:hover {
+    color: var(--gold);
+}
+
+.hover\:bg-gold:hover {
+    background-color: var(--gold);
+}
+
+
+/* Typography */
+
+body {
+    font-family: 'Montserrat', 'Avenir', 'Gotham', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+
+/* Hero Section */
+
+.hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+
+/* Premium Craftsmanship Section */
+
+.craftsmanship-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--black);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.craftsmanship-card:hover {
+    background: var(--light-grey);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.craftsmanship-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--black);
+}
+
+.craftsmanship-card:hover .craftsmanship-icon {
+    transform: scale(1.06);
+}
+
+.craftsmanship-icon i {
+    font-size: 1.75rem;
+    color: var(--black);
+    transition: all 0.3s ease;
+}
+
+.craftsmanship-card:hover .craftsmanship-icon i {
+    color: var(--black);
+}
+
+.craftsmanship-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--black);
+    text-align: center;
+    position: relative;
+}
+
+.craftsmanship-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 3px;
+    background: var(--gold);
+    transition: all 0.3s ease;
+}
+
+.craftsmanship-card:hover .craftsmanship-title::after {
+    width: 45px;
+}
+
+.craftsmanship-description {
+    color: var(--black);
+    text-align: center;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.craftsmanship-card:hover .craftsmanship-description {
+    color: var(--black);
+}
+
+
+/* Craftsmanship Button */
+
+.craftsmanship-btn {
+    background: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.craftsmanship-card:hover .craftsmanship-btn {
+    background: var(--gold);
+    color: var(--white);
+}
+
+
+/* Product Cards */
+
+.product-card {
+    transition: all 0.5s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
+
+
+/* Fade In Up Animation */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+
+/* Floating Particles for Hero Section */
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.3;
+    animation: float 15s infinite ease-in-out;
+}
+
+.particle-1 {
+    width: 15px;
+    height: 15px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.particle-2 {
+    width: 10px;
+    height: 10px;
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.particle-3 {
+    width: 8px;
+    height: 8px;
+    top: 30%;
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(20px, -30px) rotate(90deg);
+    }
+    50% {
+        transform: translate(-15px, 25px) rotate(180deg);
+    }
+    75% {
+        transform: translate(10px, -20px) rotate(270deg);
+    }
+}
+
+
+/* CTA Circles Animation */
+
+.cta-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.1;
+    animation: floatCircle 20s infinite ease-in-out;
+}
+
+.cta-circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    right: -150px;
+    animation-delay: 0s;
+}
+
+.cta-circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -100px;
+    left: 10%;
+    animation-delay: 3s;
+}
+
+.cta-circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 30%;
+    left: -75px;
+    animation-delay: 6s;
+}
+
+@keyframes floatCircle {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-20px, -30px) scale(1.1);
+    }
+    50% {
+        transform: translate(15px, 25px) scale(0.9);
+    }
+    75% {
+        transform: translate(-10px, -20px) scale(1.05);
+    }
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* Buttons */
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--black);
+    border: 2px solid var(--gold);
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+.btn-outline-gold {
+    background-color: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+
+/* Form Elements */
+
+.form-input {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--gold);
+    outline: none;
+}
+
+
+/* Section Spacing */
+
+.section-padding {
+    padding: 100px 0;
+}
+
+
+/* Mission, Vision, Values Card Hover Effect */
+
+.mvv-card-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: white;
+}
+
+.mvv-card {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.mvv-card .front-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.mvv-card .front-content i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #000000, #D4AF37);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mvv-card .front-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #000000, #D4AF37);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.mvv-card .front-content p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.mvv-card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #000000, #D4AF37);
+    color: #e8e8e8;
+    padding: 20px;
+    line-height: 1.6;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.mvv-card .content .heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.mvv-card:hover .content {
+    transform: translateX(0);
+}
+
+.mvv-card:hover .front-content {
+    transform: translateX(100%);
+}
+
+.mvv-card:hover .front-content i,
+.mvv-card:hover .front-content h3,
+.mvv-card:hover .front-content p {
+    opacity: 0;
+}
+
+
+/* Why Choose Us Section Styling */
+
+.why-choose-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.why-choose-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--gold);
+}
+
+.why-choose-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold), #000000);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.why-choose-card:hover::before {
+    transform: scaleX(1);
+}
+
+.why-choose-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #000000, #2B2B2B);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-icon {
+    background: linear-gradient(135deg, var(--gold), #D4AF37);
+    transform: scale(1.1);
+}
+
+.why-choose-icon i {
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-icon i {
+    color: black;
+}
+
+.why-choose-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-title {
+    color: var(--gold);
+}
+
+.why-choose-description {
+    color: #666;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-description {
+    color: #444;
+}
+
+
+/* Additional Features Styling */
+
+.additional-feature-card {
+    background: var(--soft-grey);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.additional-feature-card:hover {
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+
+/* Contact Page Card Styling */
+
+.contact-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    height: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--gold);
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold), #000000);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #000000, #2B2B2B);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background: linear-gradient(135deg, var(--gold), #D4AF37);
+    transform: scale(1.1);
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon i {
+    color: black;
+}
+
+.contact-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.contact-details {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-details a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--gold);
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 400px;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+    .hero-bg {
+        height: 80vh;
+    }
+}
+
+
+/* Hero Slider Styles */
+
+.hero-tiles-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    height: 100%;
+    contain: layout style paint;
+}
+
+.hero-tile {
+    background-size: calc(100vw * 6) calc(100vh * 6);
+    background-position: 0 0;
+    will-change: transform, opacity;
+    transition: none;
+    contain: strict;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    /* Force hardware acceleration */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    /* Improve performance for complex animations */
+    isolation: isolate;
+}
+
+
+/* Slider Controls */
+
+.slider-arrow:hover {
+    background-color: #ffffff;
+    color: #888888;
+}
+
+.pagination-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pagination-dots .dot.active {
+    background-color: #ffffff;
+    transform: scale(1.2);
+    border-color: #ffffff;
+}
+
+.pagination-dots .dot:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+/* Slider Loading State */
+
+.slider-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    z-index: 50;
+}
+
+
+/* Responsive Slider Controls */
+
+@media (max-width: 768px) {
+    .slider-controls {
+        bottom: 20px;
+        right: 20px;
+    }
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    .pagination-dots .dot {
+        width: 8px;
+        height: 8px;
+    }
+    /* Reduce tile count on mobile for performance */
+    .hero-tiles-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .hero-tile {
+        background-size: calc(100vw * 4) calc(100vh * 4);
+    }
+}

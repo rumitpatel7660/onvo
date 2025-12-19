@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Onvo Bath Fitting</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-black">
+    <!-- Include Menu -->
+    <div id="menu-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="bg-black text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Let's Elevate Your Bath Experience</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">Connect with our design experts to discuss your project and discover how Onvo can transform your space.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section-padding">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Information</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Reach out to us through any of the following channels. Our team is ready to assist you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Address Card -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="contact-title">Showroom Address</h3>
+                    <div class="contact-details">
+                        <p><a href="https://www.google.com/maps/search/?api=1&query=73/1,+Main+Road,+GIDC+Phase+III,+GIDC+Phase-2,+Dared,+Jamnagar,+Gujarat+361012" target="_blank" class="text-gray-600 hover:text-gold transition duration-300">73/1, Main Road, GIDC Phase III, GIDC Phase-2, Dared, Jamnagar, Gujarat 361012</a></p>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="contact-title">Call Us</h3>
+                    <div class="contact-details">
+                        <p>Customer Service:<br><a href="tel:9313297118">+91 9313297118</a><br><br>Sales Inquiries:<br><a href="tel:9714975525">+91 9714975525</a></p>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-title">Email Us</h3>
+                    <div class="contact-details">
+                        <p>General Inquiries:<br><a href="mailto:onvo@onvobath.com">onvo@onvobath.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Business Hours Card -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="contact-title">Business Hours</h3>
+                    <div class="contact-details">
+                        <p>Saturday - Thursday:<br>8:00 AM - 8:00 PM<br><br>Friday:<br>Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.519137760252!2d70.0421496747524!3d22.40947823893019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395714b6e47506c5%3A0xd1fa4004e749633c!2sShivam%20Park!5e0!3m2!1sen!2sin!4v1766136806212!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Load menu and footer
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+                // Re-initialize any menu functionality if needed
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', function() {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+
+                    // Close mobile menu when clicking on a link
+                    const mobileLinks = mobileMenu.querySelectorAll('a');
+                    mobileLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            mobileMenu.classList.add('hidden');
+                        });
+                    });
+                }
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
