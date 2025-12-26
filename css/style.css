@@ -84,8 +84,8 @@ h6 {
 /* Hero Section */
 
 .hero-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/hero-bg.jpg');
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/logo-1.png');
+    background-size: auto;
     background-position: center;
     height: 100%;
 }
@@ -748,7 +748,8 @@ h6 {
 }
 
 .hero-tile {
-    background-size: calc(100vw * 6) calc(100vh * 6);
+    background-size: 600% 600%;
+    /* Properly scale to cover 6x6 grid */
     background-position: 0 0;
     will-change: transform, opacity;
     transition: none;
@@ -827,6 +828,7 @@ h6 {
         grid-template-rows: repeat(4, 1fr);
     }
     .hero-tile {
-        background-size: calc(100vw * 4) calc(100vh * 4);
+        background-size: 400% 400%;
+        /* Properly scale to cover 4x4 grid */
     }
 }

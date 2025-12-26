@@ -116,55 +116,51 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
 
-        // Category data - Updated to match actual folder structure
+        // Category data - Updated to match actual folder structure with requested order
         const categories = [{
-            name: "Aqua - Amaze",
-            folder: "Aqua - Amaze",
-            image: "assets/products/Aqua - Amaze/AM 901.JPG"
+            name: "Ocean",
+            folder: "Ocean",
+            image: "assets/products/Ocean/KET00371.JPG"
         }, {
-            name: "Classic - Curve",
-            folder: "Classic - Curve",
-            image: "assets/products/Classic - Curve/CU 201.JPG"
+            name: "Sparky",
+            folder: "Sparky",
+            image: "assets/products/Sparky/KET01481.JPG"
         }, {
-            name: "Crystal - Eva",
-            folder: "Crystal - Eva",
-            image: "assets/products/Crystal - Eva/EV 301.JPG"
+            name: "Rapid",
+            folder: "Rapid",
+            image: "assets/products/Rapid/KET03672.JPG"
         }, {
-            name: "Extraa",
-            folder: "Extraa",
-            image: "assets/products/Extraa/KET03935.JPG"
+            name: "Classic",
+            folder: "Classic",
+            image: "assets/products/Classic/KET00580.JPG"
         }, {
-            name: "Ocean - Cadiz",
-            folder: "Ocean - Cadiz",
-            image: "assets/products/Ocean - Cadiz/CA 801.JPG"
+            name: "Oranamix",
+            folder: "Oranamix",
+            image: "assets/products/Oranamix/KET01477.JPG"
         }, {
-            name: "Ornamix - Metro",
-            folder: "Ornamix - Metro",
-            image: "assets/products/Ornamix - Metro/ME 601.JPG"
+            name: "Rubik",
+            folder: "Rubik",
+            image: "assets/products/Rubik/KET00587.JPG"
         }, {
-            name: "Project Angle Valve",
-            folder: "Project Angle Valve",
-            image: "assets/products/Project Angle Valve/160 GM FUSION ANGLE VALVE  -- 349.JPG"
+            name: "Wave",
+            folder: "Wave",
+            image: "assets/products/Wave/KET02142.JPG"
         }, {
-            name: "Rapid - Rivo",
-            folder: "Rapid - Rivo",
-            image: "assets/products/Rapid - Rivo/RI 101.JPG"
+            name: "Sleek",
+            folder: "Sleek",
+            image: "assets/products/Sleek/KET03652.JPG"
         }, {
-            name: "Rubik - Rossa",
-            folder: "Rubik - Rossa",
-            image: "assets/products/Rubik - Rossa/RS 1001.JPG"
+            name: "Aqua",
+            folder: "Aqua",
+            image: "assets/products/Aqua/KET01474.JPG"
         }, {
-            name: "Sleek - Artiz",
-            folder: "Sleek - Artiz",
-            image: "assets/products/Sleek - Artiz/AR 501.JPG"
+            name: "Crystal",
+            folder: "Crystal",
+            image: "assets/products/Crystal/KET00575.JPG"
         }, {
-            name: "Sparky - Roma",
-            folder: "Sparky - Roma",
-            image: "assets/products/Sparky - Roma/RO 401.JPG"
-        }, {
-            name: "Wave - Iris",
-            folder: "Wave - Iris",
-            image: "assets/products/Wave - Iris/IR 701.JPG"
+            name: "Angle valve",
+            folder: "Angle valve",
+            image: "assets/products/Angle valve/KET03660.JPG"
         }];
 
         // Initialize the page
@@ -269,32 +265,29 @@
             window.scrollTo(0, 0);
         }
 
+        // Define the actual product images for each category
+        const categoryImages = {
+            'Ocean': ['KET00371.JPG', 'KET00571.JPG', 'KET00572.JPG', 'KET00573.JPG', 'KET00574.JPG', 'KET00591.JPG', 'KET00592.JPG', 'KET00597.JPG', 'KET01479.JPG', 'KET01506.JPG', 'KET01512.JPG', 'KET01513.JPG', 'KET02135.JPG', 'KET02136.JPG', 'KET02138.JPG', 'KET03676.JPG', 'KET03677.JPG', 'KET03688.JPG', 'KET03723.JPG', 'KET03729.JPG', 'KET03734.JPG', 'KET03962.JPG'],
+            'Aqua': ['KET01468.JPG', 'KET01473.JPG', 'KET01474.JPG', 'KET01475.JPG', 'KET01485.JPG', 'KET01486.JPG', 'KET01493.JPG', 'KET01497.JPG', 'KET01501.JPG', 'KET01503.JPG', 'KET02150.JPG', 'KET03738.JPG', 'KET03739.JPG'],
+            'Classic': ['KET00580.JPG', 'KET00581.JPG', 'KET00582.JPG', 'KET00584.JPG', 'KET00586.JPG', 'KET00590.JPG', 'KET00594.JPG', 'KET00598.JPG', 'KET01507.JPG', 'KET01510.JPG', 'KET01514.JPG', 'KET03687.JPG', 'KET03727.JPG', 'KET03735.JPG'],
+            'Crystal': ['KET00575.JPG', 'KET00576.JPG', 'KET00577.JPG', 'KET00578.JPG', 'KET00579.JPG', 'KET00589.JPG', 'KET00593.JPG', 'KET00596.JPG', 'KET01496.JPG', 'KET01500.JPG', 'KET01502.JPG', 'KET03689.JPG', 'KET03730.JPG', 'KET03736.JPG'],
+            'Oranamix': ['KET01470.JPG', 'KET01472.JPG', 'KET01477.JPG', 'KET01478.JPG', 'KET01487.JPG', 'KET01488.JPG', 'KET01489.JPG', 'KET01492.JPG', 'KET01495.JPG', 'KET01505.JPG', 'KET01509.JPG', 'KET01516.JPG', 'KET03731.JPG', 'KET03739.JPG'],
+            'Rapid': ['KET02133.JPG', 'KET02137.JPG', 'KET02139.JPG', 'KET02143.JPG', 'KET02144.JPG', 'KET03667.JPG', 'KET03668.JPG', 'KET03669.JPG', 'KET03670.JPG', 'KET03672.JPG', 'KET03732.JPG', 'KET03737.JPG', 'KET03740.JPG', 'KET03741.JPG', 'KET03742.JPG'],
+            'Rubik': ['KET00587.JPG', 'KET00588.JPG', 'KET00595.JPG', 'KET01476.JPG', 'KET01508.JPG', 'KET01511.JPG', 'KET01517.JPG', 'KET02130.JPG', 'KET02131.JPG', 'KET02134.JPG', 'KET02140.JPG', 'KET02145.JPG', 'KET02146.JPG', 'KET02147.JPG', 'KET02149.JPG', 'KET03673.JPG', 'KET03678.JPG', 'KET03679.JPG'],
+            'Sleek': ['KET03649.JPG', 'KET03650.JPG', 'KET03651.JPG', 'KET03652.JPG', 'KET03653.JPG', 'KET03654.JPG', 'KET03655.JPG', 'KET03656.JPG', 'KET03657.JPG', 'KET03725.JPG', 'KET03733.JPG', 'KET03743.JPG', 'KET03744.JPG', 'KET03745.JPG', 'KET03750.JPG'],
+            'Sparky': ['KET01469.JPG', 'KET01471.JPG', 'KET01480.JPG', 'KET01481.JPG', 'KET01482.JPG', 'KET01484.JPG', 'KET01490.JPG', 'KET01491.JPG', 'KET01494.JPG', 'KET01498.JPG', 'KET01499.JPG', 'KET01504.JPG', 'KET02148.JPG', 'KET03733.JPG'],
+            'Wave': ['KET02132.JPG', 'KET02141.JPG', 'KET02142.JPG', 'KET03661.JPG', 'KET03662.JPG', 'KET03663.JPG', 'KET03664.JPG', 'KET03665.JPG', 'KET03666.JPG', 'KET03726.JPG', 'KET03728.JPG', 'KET03746.JPG', 'KET03747.JPG', 'KET03748.JPG', 'KET03749.JPG'],
+            'Angle valve': ['KET03660.JPG', 'KET03671.JPG', 'KET03674.JPG', 'KET03675.JPG', 'KET03680.JPG', 'KET03681.JPG', 'KET03682.JPG', 'KET03683.JPG', 'KET03684.JPG', 'KET03685.JPG', 'KET03686.JPG'],
+        };
+
         // Render products for a specific category
         function renderProducts(categoryFolder) {
             const productGrid = document.getElementById('product-grid');
             productGrid.innerHTML = '<p class="text-center text-gray-600 col-span-3">Loading products...</p>';
 
-            // Simulate loading products (in a real app, this would come from a server or file system)
+            // Simulate loading products
             setTimeout(() => {
-                // In a real implementation, we would dynamically read the files from the folder
-                // For now, we'll simulate with placeholder images
                 let productsHTML = '';
-
-                // We'll create a mapping of categories to their images
-                const categoryImages = {
-                    'Aqua - Amaze': ['AM 901.JPG', 'AM 902.JPG', 'AM 903.JPG', 'AM 904.JPG', 'AM 905.JPG', 'AM 908.JPG', 'AM 909.JPG', 'AM 910.JPG', 'AM 911.JPG', 'AM 912.JPG', 'AM 913.JPG', 'AM 914.JPG', 'AM 915.JPG', 'AM 921.JPG'],
-                    'Classic - Curve': ['CU 201.JPG', 'CU 202.JPG', 'CU 203.JPG', 'CU 204.JPG', 'CU 205 (2).JPG', 'CU 206.JPG', 'CU 207.JPG', 'CU 208.JPG', 'CU 209.JPG', 'CU 210.JPG', 'CU 211.JPG', 'CU 212.JPG', 'CU 213 (2).JPG', 'CU 214.JPG', 'CU 221.JPG'],
-                    'Crystal - Eva': ['EV 301.JPG', 'EV 302.JPG', 'EV 303.JPG', 'EV 304.JPG', 'EV 305.JPG', 'EV 306.JPG', 'EV 307.JPG', 'EV 308.JPG', 'EV 309.JPG', 'EV 310.JPG', 'EV 311.JPG', 'EV 312.JPG', 'EV 313.JPG', 'EV 314.JPG', 'EV 321.JPG'],
-                    'Extraa': ['KET03935.JPG', 'KET03936.JPG', 'KET03937.JPG', 'KET03938.JPG', 'KET03940.JPG', 'KET03943.JPG', 'KET03944.JPG'],
-                    'Ocean - Cadiz': ['CA 801.JPG', 'CA 802.JPG', 'CA 803.JPG', 'CA 804.JPG', 'CA 805.JPG', 'CA 806.JPG', 'CA 807 (2).JPG', 'CA 807.JPG', 'CA 808.JPG', 'CA 809.JPG', 'CA 810.JPG', 'CA 811.JPG', 'CA 812.JPG', 'CA 813 (2).JPG', 'CA 814.JPG', 'CA 815.JPG', 'CA 816.JPG', 'CA 817.JPG', 'CA 818.JPG', 'CA 819.JPG', 'CA 820.JPG', 'CA 821.JPG'],
-                    'Ornamix - Metro': ['ME 601.JPG', 'ME 602.JPG', 'ME 603.JPG', 'ME 604.JPG', 'ME 605.JPG', 'ME 606.JPG', 'ME 607.JPG', 'ME 608.JPG', 'ME 609.JPG', 'ME 610.JPG', 'ME 611.JPG', 'ME 612.JPG', 'ME 613.JPG', 'ME 614.JPG', 'ME 621.JPG'],
-                    'Project Angle Valve': ['160 GM FUSION ANGLE VALVE  -- 349.JPG', '160 GM OPAL ANGLE VALVE  -- 349.JPG', '160 GM PAAN ANGLE VALVE   -- 349.JPG', '160 GM PATTI ANGLE VALVE   --349.JPG', '160 GM TURBO ANGLE VALVE  -- 339.JPG', '180 GM FUSION ANGLE VALVE   -- 379.JPG', '180 GM OPAL ANGLE VALVE  -- 379.JPG', '180 GM PAAN ANGLE VALVE   -- 379.JPG', '180 GM PATTI ANGLE VALVE  -- 379.JPG', '180 GM TURBO ANGLE VALVE  --369.JPG', '190 GM SQUARE ANGLE VALVE  --439.JPG', '200 GM FUSION ANGLE VALVE   -- 419.JPG', '200 GM TURBO ANGLE VALVE  -- 399.JPG'],
-                    'Rapid - Rivo': ['RI 101.JPG', 'RI 102.JPG', 'RI 103.JPG', 'RI 104.JPG', 'RI 105 (3).JPG', 'RI 106.JPG', 'RI 107.JPG', 'RI 108.JPG', 'RI 109.JPG', 'RI 110.JPG', 'RI 111.JPG', 'RI 112.JPG', 'RI 113.JPG', 'RI 114.JPG', 'RI 121.JPG'],
-                    'Rubik - Rossa': ['RS 1001.JPG', 'RS 1002.JPG', 'RS 1003.JPG', 'RS 1004.JPG', 'RS 1005.JPG', 'RS 1006.JPG', 'RS 1007.JPG', 'RS 1008.JPG', 'RS 1009.JPG', 'RS 1010.JPG', 'RS 1011.JPG', 'RS 1012.JPG', 'RS 1013.JPG', 'RS 1014.JPG', 'RS 1015.JPG', 'RS 1016.JPG', 'RS 1017.JPG', 'RS 1018.JPG', 'RS 1021.JPG'],
-                    'Sleek - Artiz': ['AR 501.JPG', 'AR 502.JPG', 'AR 503.JPG', 'AR 504.JPG', 'AR 505.JPG', 'AR 506.JPG', 'AR 507.JPG', 'AR 508.JPG', 'AR 509.JPG', 'AR 510.JPG', 'AR 511.JPG', 'AR 512.JPG', 'AR 513.JPG', 'AR 514 (2).JPG', 'AR 521.JPG'],
-                    'Sparky - Roma': ['RO 401.JPG', 'RO 402.JPG', 'RO 403.JPG', 'RO 404.JPG', 'RO 405 (2).JPG', 'RO 406.JPG', 'RO 407.JPG', 'RO 408.JPG', 'RO 409.JPG', 'RO 410.JPG', 'RO 411.JPG', 'RO 412.JPG', 'RO 413.JPG', 'RO 414.JPG', 'RO 421.JPG'],
-                    'Wave - Iris': ['IR 701.JPG', 'IR 702.JPG', 'IR 703.JPG', 'IR 704.JPG', 'IR 705.JPG', 'IR 706.JPG', 'IR 707.JPG', 'IR 708.JPG', 'IR 709.JPG', 'IR 710.JPG', 'IR 711.JPG', 'IR 712.JPG', 'IR 713.JPG', 'IR 714.JPG', 'IR 715.JPG', 'IR 721.JPG']
-                };
 
                 const images = categoryImages[categoryFolder] || [];
 
