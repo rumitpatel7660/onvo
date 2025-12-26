@@ -112,13 +112,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function initHeroSlider() {
         // Hero Slider Configuration
         const heroImages = [
-            'assets/hero/1.jpg',
-            'assets/hero/2.jpg',
-            'assets/hero/3.jpg',
-            'assets/hero/4.jpg',
-            'assets/hero/5.jpg',
+            'assets/hero/1.png',
+            'assets/hero/2.png',
+            'assets/hero/3.png',
+            'assets/hero/4.png',
+            'assets/hero/5.png',
             'assets/hero/6.png',
-            'assets/hero/7.jpg'
+            'assets/hero/7.png'
         ];
 
         const tilesContainer = document.querySelector('.hero-tiles-container');
@@ -277,7 +277,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     tile.style.backgroundImage = `url('${imageUrl}')`;
                     tile.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
-                    tile.style.backgroundSize = `${cols * 100}% ${rows * 100}%`;
 
                     tilesContainer.appendChild(tile);
                 }
